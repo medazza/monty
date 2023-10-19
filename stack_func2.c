@@ -55,21 +55,17 @@ void nodes_add(stack_t **stack, unsigned int lne_nmbr)
  * @stack: A pointer to pointer point to top node of  stack.
  * @lne_nmbr: A interger represent the line_number of the opcode.
  */
-void nodes_sub(stack_t **stack, unsigned int lne_nmbr) {
-    int sum;
+void nodes_sub(stack_t **stack, unsigned int lne_nmbr)
+{
+	int sum;
 
-    if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-        erro_2(8, lne_nmbr, "sub");
-
-    if ((*stack)->prev == NULL) {
-        erro_2(8, lne_nmbr, "sub");
-    }
-
-    (*stack) = (*stack)->next;
-    sum = (*stack)->n - (*stack)->prev->n;
-    (*stack)->n = sum;
-    free((*stack)->prev);
-    (*stack)->prev = NULL;  
+	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
+		erro_2(8, lne_nmbr, "sub");
+	(*stack) = (*stack)->next;
+	sum = (*stack)->n - (*stack)->prev->n;
+	(*stack)->n = sum;
+	free((*stack)->prev);
+	(*stack)->prev = NULL;
 }
 /**
  * nodes_div - Func adds the top two elements of stack.
