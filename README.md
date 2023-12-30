@@ -29,7 +29,7 @@ Monty Interpreter is designed to execute Monty byte code files (usually with a `
 
 1. Clone this repository to your local machine.
    ```sh
-   git clone https://github.com/ugwujustine/monty.git
+   git clone https://github.com/medazza/monty.git
    ```
 2. Compile and build the Monty Interpreter.
    ```sh
